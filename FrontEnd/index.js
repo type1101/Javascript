@@ -242,7 +242,7 @@ addPhoto.addEventListener("change", function(){
 
     reader.onload = function(event) {
       imagePreview.src = event.target.result;
-      imagePreview.style.display = "block";
+      imagePreview.style.display = "block"; // preview de l'image
     }
     reader.readAsDataURL(fileSelected)
   }
