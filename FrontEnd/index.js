@@ -147,7 +147,6 @@ function loginLogout() {
         modification.classList.add('inactive')
     }
 
-    console.log("Classes après changement :", modification.classList);
 }
 
 btnLogout.addEventListener('click', () => {
