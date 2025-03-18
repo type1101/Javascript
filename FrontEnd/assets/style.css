@@ -84,6 +84,11 @@ h2{
 	font-size: 30px;
 	color: #1D6154
 }
+
+a {
+	text-decoration: none;
+	color: #000000;
+}
 nav ul {
 	display: flex;
 	align-items: center;
@@ -135,8 +140,30 @@ li:hover {
 
 .gallery img {
 	width: 100%;
+}
+
+.category-menu{
+	display: flex;
+  	gap: 10px;
+  	margin-bottom: 20px;
+	justify-content: center;
 
 }
+
+.category-menu button {
+	padding: 10px 20px;
+	border: none;
+	border-radius: 25px;
+	background-color: #f0f0f0;
+	color: #333;
+	cursor: pointer;
+	font-size: 16px;
+}
+.category-menu button.active {
+	background-color: #1D6154;
+	color: #fff;
+  }
+
 #contact {
 	width: 50%;
 margin: auto;
@@ -186,3 +213,353 @@ footer nav ul {
 	margin: 2em
 }
 
+
+.inactive{
+	display: none;
+}
+
+.filters-container {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+	margin: 50px;
+}
+
+.modification i {
+	position: relative;
+	top: 10px;
+}
+
+.btnEdition {
+	gap: 6px;
+	padding-top: 15px;
+	padding-left: 60px;
+	text-decoration: none;
+}
+
+.projets {
+	display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+#modal {
+	position: fixed;
+	width: 630px;
+	height: 670px;
+	border-radius: 10px;
+	border: none;
+
+}
+
+
+
+dialog::backdrop {
+	background-color: #16141473;
+}
+
+.modal_content {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+#modalGallery {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 12px;
+	width: 70%;
+	padding-top: 30px;
+	padding-bottom: 20px;
+	justify-content: center;
+}
+
+#modalGallery img {
+	width: 95px;
+	height: 110px;
+}
+
+#modalGallery figcaption {
+	display: none;
+}
+
+.modalLine {
+	border: 1px solid rgba(150, 149, 149, 0.74);
+	border-top: none;
+	width: 80%;
+	margin-top: 5px;
+}
+
+.modalBtn {
+	display: flex;
+	gap: 6px;
+	font-size: 1em;
+	background: none;
+	border: none;
+	cursor: pointer;
+}	
+
+#validePics {
+	background-color: #1D6154;
+	color: white;
+	border-radius: 20px;
+	padding: 8px 13px 8px 13px;
+	border: 1.5px solid #1D6154;
+	font-family: 'Syne';
+	font-size: 1.1em;
+	margin-top: 30px;
+	margin-bottom: 15px;
+	margin-left: 265px;
+	
+	cursor: pointer;
+}
+
+.modalLine span {
+	border: 1px solid rgba(150, 149, 149, 0.74);
+	border-top: none;
+	width: 80%;
+	margin-top: 5px;
+}
+
+.fa-trash-can{
+	font-size: small;
+    color: white;
+    position: relative;
+    top: -108px;
+    left: 75px;
+    background: black;
+    width: 18px;
+    height: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.fa-arrow-left {
+	border: none;
+	background-color: white;
+	font-size: 21px;
+	position: absolute;
+	top: 20px;
+	left: 40px;
+	cursor: pointer;
+
+}
+.closeModal2 {
+    border: none;
+    background-color: white;
+    font-size: 1.7em;
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    cursor: pointer;
+}
+.modalNav2 {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 30px;
+}
+.modalAdd {
+	position: fixed;
+	width: 630px;
+	height: 670px;
+	border-radius: 10px;
+	border: none;
+	gap: 10px;
+}
+.modalAddPics {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+}
+
+
+#zoneAddPics {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-bottom: 20px;
+	align-items: center;
+	background-color: #e8F1F6;
+	margin: auto;
+	width: 80%;
+	height: 250px;
+}
+
+.fa-image{
+	font-size: 80px;
+	margin-top: 10px;
+	color: #B9C5CC;
+}
+
+#adddPics {
+	height: 200px;
+	width: 80%;
+}
+
+.modalh3 {
+	padding-bottom: 20px;
+}
+.title, .categorie {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-bottom: 20px;
+	align-items: center;
+	padding-top: 30px;
+	width: 100%;
+	gap: 10px
+}
+#addTittle, #categoryChoice {
+	width: 80%;
+	height: 30px;
+	margin: auto;
+	display: flex;
+}
+
+
+#fileSelected {
+	height: 250px;
+	display: none;
+	position: absolute;
+}
+
+#fileChoice {
+	font-family: 'Syne';
+	font-weight: 700;
+	color: #306685;
+	background-color: #CBD6DC;
+	margin-bottom: 20px;
+	text-align: center;
+	border-radius: 60px ;
+	padding: 8px;
+	cursor: pointer;
+	border: none;
+}
+input#addTitle, select#CategoryChoice {
+    box-shadow: 0px 4px 14px 0px #00000017;
+    border: none;
+    height: 45px;
+    width: 420px;
+}
+
+
+.title p {
+ padding-bottom: 10px;
+}
+
+#addPics {
+	display: none;
+}
+
+.title, .categorie {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-bottom: 20px;
+	align-items: center;
+	padding-top: 30px;
+	width: 100%;
+	gap: 10px
+}
+
+#addTittle, #categoryChoice {
+	width: 80%;
+	height: 30px;
+	margin: auto;
+	display: flex;
+}
+
+.edition{
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: black;
+	color: white;
+	width: 100%;
+	gap: 10px;
+	height: 45px;
+}
+.projets {
+	display: flex;
+    justify-content: center;
+    gap: 30px;
+	padding-bottom: 3px;
+}
+
+.modification{
+	display: flex;
+}
+
+.btnEdition {
+	border-radius: 20px;
+    padding: 8px;
+    font-weight: bold;
+	cursor: pointer;
+	
+
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#modal form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	
+	
+}
+.gallery {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-column-gap: 20px;
+	grid-row-gap: 20px;
+}
+
+
+.gallery img {
+	width: 100%;
+
+}
+#contact {
+	width: 50%;
+margin: auto;
+}
+#contact > * {
+	text-align: center;
+
+}
+#contact h2{
+	margin-bottom: 20px;
+}
+#contact form {
+	text-align: left;
+	margin-top:30px;
+	display: flex;
+	flex-direction: column;
+}
+
+#contact input {
+	height: 50px;
+	font-size: 1.2em;
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+#contact label {
+	margin: 2em 0 1em 0;
+}
+#contact textarea {
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
