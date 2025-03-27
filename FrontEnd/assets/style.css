@@ -30,6 +30,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	background-color: #FFFEF8;
 }
 ol, ul {
 	list-style: none;
@@ -201,8 +202,9 @@ input[type="submit"]{
 	font-weight: 700;
 	color: white;
 	background-color: #1D6154;
-	margin : 2em auto ;
-	width: 180px;
+	margin : 4em auto ;
+	width: 200px;
+	padding: 10px 10px 10px 10px;
 	text-align: center;
 	border-radius: 60px ;
 }
@@ -210,7 +212,8 @@ input[type="submit"]{
 footer nav ul {
 	display: flex;
 	justify-content: flex-end;
-	margin: 2em
+	margin: 2em;
+	background-color: white;
 }
 
 
@@ -271,8 +274,8 @@ dialog::backdrop {
 	flex-wrap: wrap;
 	gap: 12px;
 	width: 70%;
-	padding-top: 30px;
-	padding-bottom: 20px;
+	padding-top: 80px;
+	padding-bottom: 86px;
 	justify-content: center;
 }
 
@@ -305,14 +308,12 @@ dialog::backdrop {
 	background-color: #1D6154;
 	color: white;
 	border-radius: 20px;
-	padding: 8px 13px 8px 13px;
+	padding: 14px 62px 11px 62px;
 	border: 1.5px solid #1D6154;
 	font-family: 'Syne';
 	font-size: 1.1em;
 	margin-top: 30px;
 	margin-bottom: 15px;
-	margin-left: 265px;
-	
 	cursor: pointer;
 }
 
@@ -346,6 +347,17 @@ dialog::backdrop {
 	cursor: pointer;
 
 }
+
+.closeModal {
+    border: none;
+    background-color: white;
+    font-size: 1.7em;
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    cursor: pointer;
+}
+
 .closeModal2 {
     border: none;
     background-color: white;
@@ -567,4 +579,9 @@ margin: auto;
 #validePics:disabled {
     background-color: grey;
     cursor: not-allowed;
+}
+
+.galleryPics{
+	font-size: 26px;
+	font-weight: 400;
 }
