@@ -1,5 +1,9 @@
 let allWorks = []
 
+document.getElementById("validePics").setAttribute("disabled", "true");
+document.getElementById("validePics").classList.add("colorvalid");
+
+
 
 async function getWorks() {
     try{
@@ -286,6 +290,37 @@ ValidePics.addEventListener("click", async function (e) {
     console.error("Erreur lors de la requête :", error);
   }
 });
+
+document.getElementById("addTitle").addEventListener("input", checkFormValidity);
+document.getElementById("addPics").addEventListener("change", checkFormValidity);
+document.getElementById("categoryChoice").addEventListener("change", checkFormValidity);
+
+
+
+
+function checkFormValidity() {
+  const title = document.getElementById("addTitle").value.trim();
+  const image = document.getElementById("addPics").files.length > 0;
+  const category = document.getElementById("categoryChoice").value;
+
+  const valideButton = document.getElementById("validePics");
+
+  if (title !== "" && image && category !== "") {
+      valideButton.removeAttribute("disabled");
+      valideButton.classList.remove("colorvalid"); // Active le bouton
+  } else {
+      valideButton.setAttribute("disabled", "true");
+      valideButton.classList.add("colorvalid"); // Désactive le bouton
+  }
+}
+addPicsBtn.addEventListener("click", function() {
+  modalAdd.showModal();
+
+  // Réinitialiser les champs et désactiver le bouton
+  document.getElementById("modalAddPics").reset(); // Réinitialise le formulaire
+  checkFormValidity(); // Mettre le bouton "Valider" en gris
+});
+
 
 
 

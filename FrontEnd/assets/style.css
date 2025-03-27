@@ -215,7 +215,7 @@ footer nav ul {
 
 
 .inactive{
-	display: none;
+	display: none !important;
 }
 
 .filters-container {
@@ -562,4 +562,9 @@ margin: auto;
 #contact textarea {
 	border: none;
 	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+#validePics:disabled {
+    background-color: grey;
+    cursor: not-allowed;
 }
